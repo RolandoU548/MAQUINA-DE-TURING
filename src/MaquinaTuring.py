@@ -95,17 +95,3 @@ class Transicion:
 
     def __str__(self):
         return f"f({self.estado}, {self.simbolo}) = ({self.estado_siguiente}, {self.simbolo_siguiente}, {self.desplazamiento})"
-
-
-N = int(input())
-maquinas_de_turing = []
-
-for i in range(N):
-    input()
-    maquinas_de_turing.append(MaquinaTuring(input()))
-
-for i in range(N):
-    if maquinas_de_turing[i].evaluar_cadena():
-        print(f"Caso {i+1}:\nAceptada")
-    else:
-        print(f"Caso {i+1}:\nRechazada")
